@@ -4336,3 +4336,16 @@ blockquote::before {
 	border-radius: 3px;
 	margin-top: 10px;
 }
+
+
+
+
+/* Customized */
+
+img.logo_light {
+    height: 55px !important;
+}
+
+html,body {
+	overflow-x: hidden;
+}
