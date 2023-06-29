@@ -32,7 +32,7 @@ $message = "Name: $name\nFather Name: $f_name\nEmail: $email\nPhone Number: $mob
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-if (mail('elavarasan5193@gmail.com', $subject, $message, $headers)) {
+if (mail('jenneyseducation@yahoo.com', $subject, $message, $headers)) {
     // Email sent successfully
     $response = array('message' => 'Alumni Registration Successful!');
     echo json_encode($response);
