@@ -37,7 +37,7 @@ $email = $_POST['email'];
 $address = $_POST['address'];
 
 // Set up email headers
-$headers = "From: www.jenneysacademy.com" . "\r\n" .
+$headers = "From: www.jenneysedu.in" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content

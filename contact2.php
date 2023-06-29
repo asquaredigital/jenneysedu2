@@ -14,7 +14,7 @@ $p_number = $_POST['contact'];
 $msg = $_POST['message'];
 
 // Set up email headers
-$headers = "From: www.jenneysacademy.com" . "\r\n" .
+$headers = "From: www.jenneysedu.in" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
