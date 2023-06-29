@@ -241,21 +241,21 @@
                                         <div class="form-group">
                                             <label for="name">Applicant Name:</label>
                                             <input type="text" name="name" id="name" class="form-control"
-                                                placeholder="Applicant Name" required="required" autocomplete="given-name">
+                                                placeholder="Applicant Name*" required="required" autocomplete="given-name">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="dob">DOB:</label>
                                             <input type="text" name="dob" id="dob" class="form-control"
-                                                placeholder="DD/MM/YYYY" required="required" autocomplete="given-name"father_name>
+                                                placeholder="DD/MM/YYYY *" required="required" autocomplete="given-name"father_name>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="father_name">Father's Name:</label>
                                             <input type="text" name="father_name" id="father_name" class="form-control"
-                                                placeholder="Father's Name" required="required">
+                                                placeholder="Father's Name*" required="required">
                                         </div>
         
                                     </div>
@@ -263,13 +263,13 @@
                                         <div class="form-group">
                                             <label for="mother_name">Mother's Name:</label>
                                             <input type="text" name="mother_name" id="mother_name" class="form-control"
-                                                placeholder="Mother's Name" required="required">
+                                                placeholder="Mother's Name*" required="required">
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
         
                                         <div class="form-group">
-                                            <label for="religion">Religion:</label>
+                                            <label for="religion">Religion *:</label>
                                             <div class="input-group">
                                                 <select class="form-control" name="religion" id="religion"
                                                     required="required">
@@ -285,7 +285,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label for="apl_community">Community:</label>
+                                            <label for="apl_community">Community *:</label>
                                             <div class="input-group">
                                                 <select class="form-control" name="community" id="community"
                                                     required="required">
@@ -310,14 +310,14 @@
                                             <label for="apl_caste">Caste:</label>
                                             <div class="input-group">
                                                 <input type="text" class="form-control" name="caste" id="caste"
-                                                    placeholder="Caste" required="required">
+                                                    placeholder="Caste*" required="required">
                                             </div>
                                         </div>
         
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label for="scourse">Select Degree:</label>
+                                            <label for="scourse">Select Degree*:</label>
                                             <div class="input-group">
                                                 <select class="form-control" name="scourse" id="scourse" required="required"
                                                     v-model="selectedCourse" @change="chooseCourse(selectedCourse)">
@@ -336,19 +336,19 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="sslc_obtained" class="form-control" id="sslc_obtained"
-                                                        placeholder="Marks Obtained*" type="text" required>
+                                                        placeholder="SSLC Marks Obtained*" type="text" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="sslc_total" class="form-control" id="sslc_total"
-                                                        placeholder="Total Marks*" type="text" required>
+                                                        placeholder="SSLC Total Marks*" type="text" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="sslc_passing" class="form-control" id="sslc_passing"
-                                                        placeholder="Year of Passing*" type="text" required>
+                                                        placeholder="SSLC Year of Passing*" type="text" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -361,19 +361,19 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="hsc_obtained" class="form-control" id="hsc_obtained"
-                                                        placeholder="Marks Obtained*" type="text" required>
+                                                        placeholder="HSC Marks Obtained*" type="text" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="hsc_total" class="form-control" id="hsc_total"
-                                                        placeholder="Total Marks*" type="text" required>
+                                                        placeholder="HSC Total Marks*" type="text" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="hsc_passing" class="form-control" id="hsc_passing"
-                                                        placeholder="Year of Passing*" type="text" required>
+                                                        placeholder="HSC Year of Passing*" type="text" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -387,21 +387,38 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="ug_subject" class="form-control" id="ug_subject"
-                                                        placeholder="Major" type="text" required>
+                                                        placeholder="UG Major*" type="text" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input name="ug_obtained" class="form-control" id="ug_obtained"
+                                                        placeholder="UG Obtained Marks*" type="text" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="ug_total" class="form-control" id="ug_total"
-                                                        placeholder="Total Marks*" type="text" required>
+                                                        placeholder="UG Total Marks*" type="text" required>
                                                 </div>
                                             </div>
+                                           
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input name="ug_percentage" class="form-control" id="ug_percentage"
+                                                        placeholder="UG Percentage*" type="text" required>
+                                                </div>
+                                            </div>
+                                           
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="ug_passing" class="form-control" id="ug_passing"
-                                                        placeholder="Year of Passing*" type="text" required>
+                                                        placeholder="UG Year of Passing*" type="text" required>
                                                 </div>
                                             </div>
+                                          
                                         </div>
                                     </div>
         
@@ -411,19 +428,35 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="pg_subject" class="form-control" id="pg_subject"
-                                                        placeholder="Major" type="text" required>
+                                                        placeholder="PG Major" type="text" >
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input name="pg_obtained" class="form-control" id="pg_obtained"
+                                                        placeholder="PG Obtained Marks" type="text" >
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="pg_total" class="form-control" id="pg_total"
-                                                        placeholder="Total Marks*" type="text" required>
+                                                        placeholder="PG Total Marks" type="text" >
                                                 </div>
                                             </div>
+                                           
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input name="pg_percentage" class="form-control" id="pg_percentage"
+                                                        placeholder="PG Percentage" type="text" >
+                                                </div>
+                                            </div>
+                                            
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="pg_passing" class="form-control" id="pg_passing"
-                                                        placeholder="Year of Passing*" type="text" required>
+                                                        placeholder="PG Year of Passing" type="text" >
                                                 </div>
                                             </div>
                                         </div>
@@ -435,19 +468,34 @@
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="bed_subject" class="form-control" id="bed_subject"
-                                                        placeholder="Major" type="text" required>
+                                                        placeholder="B.Ed Major" type="text" >
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input name="bed_obtained" class="form-control" id="bed_obtained"
+                                                        placeholder="B.Ed Obtained Marks" type="text" >
                                                 </div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="bed_total" class="form-control" id="bed_total"
-                                                        placeholder="Total Marks*" type="text" required>
+                                                        placeholder="B.Ed Year of Passing" type="text" >
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <input name="bed_percentage" class="form-control" id="bed_percentage"
+                                                        placeholder="B.Ed Percentage" type="text" >
+                                                </div>
+                                            </div>
+                                           
                                             <div class="col-lg-4">
                                                 <div class="form-group">
                                                     <input name="bed_passing" class="form-control" id="bed_passing"
-                                                        placeholder="Year of Passing*" type="text" required>
+                                                        placeholder="B.Ed Year of Passing" type="text" >
                                                 </div>
                                             </div>
                                         </div>
@@ -633,14 +681,20 @@
 					hsc_total: $('#hsc_total').val(),
 					hsc_passing: $('#hsc_passing').val(),
 					ug_subject: $('#ug_subject').val(),
+                    ug_obtained: $('#ug_obtained').val(),
 					ug_total: $('#ug_total').val(),
+                    ug_percentage: $('#ug_percentage').val(),
 					ug_passing: $('#ug_passing').val(),
 					pg_total: $('#pg_total').val(),
 				    pg_subject: $('#pg_subject').val(),
+                    pg_obtained: $('#pg_obtained').val(),
+                    pg_percentage: $('#pg_percentage').val(),
 					pg_passing: $('#pg_passing').val(),
 					bed_subject: $('#bed_subject').val(),
 					bed_total: $('#bed_total').val(),
 					bed_passing: $('#bed_passing').val(),
+                    bed_obtained: $('#bed_obtained').val(),
+					bed_percentage: $('#bed_percentage').val(),
                     mobile: $('#mobile').val(),
                     email: $('#email').val(),
                     address: $('#address').val(),
