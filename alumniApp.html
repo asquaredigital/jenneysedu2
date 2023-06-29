@@ -240,15 +240,15 @@
                             <div class="row m-3">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="apl_name"> Name:</label>
-                                        <input type="text" name="apl_name" id="apl_name" class="form-control"
+                                        <label for="father_name"> Name:</label>
+                                        <input type="text" name="name" id="father_name" class="form-control"
                                             placeholder=" Name" required="required" autocomplete="given-name">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="fr_name">Father's Name:</label>
-                                        <input type="text" name="fr_name" id="fr_name" class="form-control"
+                                        <label for="father_name">Father's Name:</label>
+                                        <input type="text" name="father_name" id="father_name" class="form-control"
                                             placeholder="Father's Name" required="required">
                                     </div>
 
@@ -256,8 +256,8 @@
 
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="mail_id">Email:</label>
-                                        <input type="email" name="mail_id" id="mail_id" class="form-control"
+                                        <label for="email">Email:</label>
+                                        <input type="email" name="email" id="email" class="form-control"
                                             placeholder="Contact Mail Id" required="required" autocomplete="email">
                                     </div>
 
@@ -265,8 +265,8 @@
 
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="mobile_no">Mobile No:</label>
-                                        <input type="tel" name="mobile_no" id="mobile_no" class="form-control"
+                                        <label for="mobile">Mobile No:</label>
+                                        <input type="text" name="mobile" id="mobile" class="form-control"
                                             placeholder="Contact Mobile Number" required="required"
                                             autocomplete="tel-national">
                                     </div>
@@ -274,9 +274,9 @@
 
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="scourse">Select Degree:</label>
+                                        <label for="course">Select Degree:</label>
                                         <div class="input-group">
-                                            <select class="form-control" name="scourse" id="scourse"
+                                            <select class="form-control" name="course" id="course"
                                                 required="required">
                                                 <option selected="" value="">--Select Degree--</option>
                                                 <option value="bed">B.Ed.,</option>
@@ -319,7 +319,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="apl_caste">Current Position:</label>
+                                        <label for="position">Current Position:</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="position" id="position"
                                                 placeholder="position" required="required">
@@ -333,10 +333,10 @@
 
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="st_address">Address:</label>
-                                        <textarea name="st_address" id="st_address" class="form-control"
+                                        <label for="address">Address:</label>
+                                        <textarea name="address" id="address" class="form-control"
                                             placeholder="Address for communication" style="height: 115px;"
-                                            required="required" autocomplete="street-address"></textarea>
+                                            required="required"></textarea>
                                     </div>
                                 </div>
 
@@ -345,6 +345,8 @@
                                     <button type="submit" title="Submit Your Message!" class="btn btn-default"
                                         name="submit" value="Submit">Register Now</button>
                                 </div>
+                                <div style="text-align: center; color:white" id="response-message"></div>                                            </div>
+
 
                             </div>
                         </form>
@@ -468,6 +470,50 @@
     <script src="assets/js/jquery.parallax-scroll.js"></script>
     <!-- scripts js -->
     <script src="assets/js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').submit(function(event) {
+                event.preventDefault(); // Prevent form submission
+        
+                // Get form data
+                var formData = {
+                   
+                    name: $('#name').val(),
+                    father_name: $('#father_name').val(),
+                  
+                    email: $('#email').val(),
+                    mobile: $('#mobile').val(),
+                    course: $('#course').val(),
+
+                    year: $('#year').val(),
+                    position: $('#position').val(),
+                    address: $('#address').val(),
+                };
+        
+                // Send AJAX request
+                $.ajax({
+                    type: 'POST',
+                    url: 'alumni.php',
+                    data: formData,
+                    dataType: 'json',
+                    encode: true
+                })
+                .done(function(response) {
+                    // Display response message
+                    $('#response-message').text(response.message);
+                    $("#contact-form").trigger("reset");
+
+                })
+                .fail(function(response) {
+                    // Display error message
+                    $('#response-message').text('Error occurred while processing the request.');
+                    $("#contact-form").trigger("reset");
+
+                });
+            });
+        });
+        
+            </script>
 
 </body>
 

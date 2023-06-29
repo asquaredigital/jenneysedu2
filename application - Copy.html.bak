@@ -386,7 +386,7 @@
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form-group">
-                                                    <input name="ug_subject" class="form-control" id="ug_subject"
+                                                    <input name="ug-subject" class="form-control" id="ug-subject"
                                                         placeholder="Major" type="text" required>
                                                 </div>
                                             </div>
@@ -410,7 +410,7 @@
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form-group">
-                                                    <input name="pg_subject" class="form-control" id="pg_subject"
+                                                    <input name="pg-subject" class="form-control" id="pg-subject"
                                                         placeholder="Major" type="text" required>
                                                 </div>
                                             </div>
@@ -434,7 +434,7 @@
                                         <div class="row">
                                             <div class="col-lg-4">
                                                 <div class="form-group">
-                                                    <input name="bed_subject" class="form-control" id="bed_subject"
+                                                    <input name="bed-subject" class="form-control" id="bed-subject"
                                                         placeholder="Major" type="text" required>
                                                 </div>
                                             </div>
@@ -456,8 +456,8 @@
         
                                     <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label for="mobile">Mobile No:</label>
-                                            <input type="tel" name="mobile" id="mobile" class="form-control"
+                                            <label for="mobile_no">Mobile No:</label>
+                                            <input type="tel" name="mobile_no" id="mobile_no" class="form-control"
                                                 placeholder="Contact Mobile Number" required="required"
                                                 autocomplete="tel-national">
                                         </div>
@@ -465,8 +465,8 @@
         
                                     <div class="col-lg-4">
                                         <div class="form-group">
-                                            <label for="email">Email:</label>
-                                            <input type="email" name="email" id="email" class="form-control"
+                                            <label for="mail_id">Email:</label>
+                                            <input type="email" name="mail_id" id="mail_id" class="form-control"
                                                 placeholder="Contact Mail Id" required="required" autocomplete="email">
                                         </div>
         
@@ -474,8 +474,8 @@
         
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label for="address">Address:</label>
-                                            <textarea name="address" id="address" class="form-control"
+                                            <label for="st_address">Address:</label>
+                                            <textarea name="st_address" id="st_address" class="form-control"
                                                 placeholder="Address for communication" style="height: 115px;"
                                                 required="required" autocomplete="street-address"></textarea>
                                         </div>
@@ -621,9 +621,9 @@
                     name: $('#name').val(),
                     dob: $('#dob').val(),
                     father_name: $('#father_name').val(),
-                    mother_name: $('#mother_name').val(),
-                    religion: $('#religion').val(),
-                    community: $('#community').val(),
+                    Mother_name: $('#mother_name').val(),
+                    Religion: $('#religion').val(),
+                    Community: $('#community').val(),
 					caste: $('#caste').val(),
 					scourse: $('#scourse').val(),
 					sslc_obtained: $('#sslc_obtained').val(),
@@ -641,6 +641,8 @@
 					bed_subject: $('#bed_subject').val(),
 					bed_total: $('#bed_total').val(),
 					bed_passing: $('#bed_passing').val(),
+                    location: $('#location').val(),
+                    pin_code: $('#pin_code').val(),
                     mobile: $('#mobile').val(),
                     email: $('#email').val(),
                     address: $('#address').val(),

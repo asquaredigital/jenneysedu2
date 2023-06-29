@@ -1,0 +1,90 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    // Script accessed directly without form submission
+    $response = array('message' => 'Invalid request.');
+    echo json_encode($response);
+    exit;
+}
+
+
+// Get form data
+$name = $_POST['name'];
+$dob = $_POST['dob'];
+$father_name = $_POST['father_name'];
+$Mother_name = $_POST['mother_name'];
+$religion = $_POST['religion'];
+$community = $_POST['community'];
+$caste = $_POST['caste'];
+$scourse = $_POST['scourse'];
+$sslc_obtained = $_POST['sslc_obtained'];
+$sslc_total = $_POST['sslc_total'];
+$sslc_passing = $_POST['sslc_passing'];
+$hsc_obtained = $_POST['hsc_obtained'];
+$hsc_total = $_POST['hsc_total'];
+$hsc_passing = $_POST['hsc_passing'];
+$ug_subject = $_POST['ug_subject'];
+$ug_total = $_POST['ug_total'];
+$ug_passing = $_POST['ug_passing'];
+$pg_total = $_POST['pg_total'];
+$pg_subject = $_POST['pg_subject'];
+$pg_passing = $_POST['pg_passing'];
+$bed_subject = $_POST['bed_subject'];
+$bed_total = $_POST['bed_total'];
+$bed_passing = $_POST['bed_passing'];
+$mobile = $_POST['mobile'];
+$email = $_POST['email'];
+$address = $_POST['address'];
+
+// Set up email headers
+$headers = "From: www.jenneysacademy.com" . "\r\n" .
+           "Reply-To: $u_email" . "\r\n" ;
+
+// Set up email content
+$subject = 'New Application Form the Website from '.$name;
+$message = 
+"Name: $name\n
+DOB: $dob\n
+Father Name: $father_name\n
+Mother Name: $mother_name\n
+Religion: $religion\n
+Community: $community\n
+Caste: $caste\n
+Course Selected: $scourse\n
+SSLC Obtained Marks: $sslc_obtained\n
+SSLC Total: $sslc_total\n
+SSLC Passing Year: $sslc_passing\n
+HSC Obtained Marks: $hsc_obtained\n
+HSC Total: $hsc_total\n
+HSC Year of Passing: $hsc_passing\n
+UG Subject: $ug_subject\n
+UG Total: $ug_total\n
+UG Passing Year: $ug_passing\n
+PG Subject: $pg_subject\n
+PG Total: $pg_total\n
+PG Passing Year: $pg_passing\n
+B.Ed Subject : $bed_subject\n
+B.Ed Total: $bed_total\n
+B.Ed Passing YEar: $bed_passing\n
+Mobile: $mobile\n
+Email: $email\n
+Address: $address\n
+";
+
+
+
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+if (mail('elavarasan5193@gmail.com', $subject, $message, $headers)) {
+    // Email sent successfully
+    $response = array('message' => 'Application sent successfully!');
+    echo json_encode($response);
+} else {
+    // Failed to send email
+    $response = array('message' => 'Failed to send Application, Please try again.');
+    echo json_encode($response);
+    echo "Error: " . error_get_last()['message'];
+}
+?>
