@@ -80,9 +80,29 @@
 
         @media only screen and (max-width: 480px) {
             .navbar-brand {
-                padding: 4px 0 !important;
+                padding: 9px 0 !important;
             }
         }
+
+        #news .content_desc {
+            position: relative;
+            height: 67px !important;
+        }
+        #news .content_box {
+    background-color: #fff;
+    margin-top: 10px !important     ;
+}
+
+#news1 .content_desc {
+    position: relative;
+    /* padding: 15px; */
+    height: 299px;
+}
+
+#news1 .content_box {
+    background-color: #fff;
+    margin-top: 1px !important;
+}
     </style>
 </head>
 
@@ -140,7 +160,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="dropdown">
-                            <a class=" nav-link active" href="index.html" >Home</a>
+                            <a class=" nav-link active" href="index.html">Home</a>
 
                         </li>
                         <li class="dropdown">
@@ -347,18 +367,18 @@
             <div class="row justify-content-between align-items-center">
 
 
-                <div class="col-xl-6 col-md-6 h-100">
+                <div class="col-xl-6 col-md-6 h-100" id="news">
                     <div class="card ">
                         <div class="card-header">
                             <h3>News and Events</h3>
                         </div>
                         <div class="card-body">
                             <marquee width="100%" direction="up" height="200px" scrollamount="2">
-                                <div class="py-3">
+                                <div class="">
                                     <div class="content_box event_box box_shadow1  py-3">
                                         <p>Admissions going on for 2023-2024 </p>
-                                        <a class="btn btn-default animation rounded-0" href="application.html">Apply
-                                            online</a>
+                                        <!-- <a class="btn btn-default  rounded-0" href="application.html">Apply
+                                            online</a> -->
                                     </div>
                                 </div>
 
@@ -366,16 +386,13 @@
                                     <div class="content_box event_box box_shadow1">
 
                                         <div class="content_desc bg-white">
-                                            <h4 class="content_title"><a href="yogaGallery.html">International Yoga
-                                                    Day</a></h4>
-                                            <ul class="list_none content_meta">
-                                                <!-- <li><i class="ti-user"></i> <a href="#" class="text_default">John Wood</a></li> -->
-                                                <li><i class="ti-location-pin"></i><span
-                                                        class="text_default">Trichy</span></li>
-                                            </ul>
-                                            <p>International Yoga Day at our college, celebrating peace, harmony, and
-                                                well-being
-                                                together.</p>
+
+                                            <a href="yogaGallery.html">
+                                                <p>International Yoga Day at our college, celebrating peace, harmony,
+                                                    and
+                                                    well-being
+                                                    together.</p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -383,17 +400,11 @@
                                     <div class="content_box event_box box_shadow1 ">
 
                                         <div class="content_desc bg-white">
-                                            <h4 class="content_title"><a href="nsGallery.html">National Seminar</a></h4>
-                                            <ul class="list_none content_meta">
-                                                <!-- <li><i class="ti-user"></i> <a href="#" class="text_default">John Wood</a></li> -->
-                                                <li><i class="ti-location-pin"></i><span
-                                                        class="text_default">Trichy</span></li>
-                                            </ul>
-                                            <p>Our M.Ed. and B.Ed. college organized a prestigious National Seminar,
-                                                providing a platform
-                                                for educators to share expertise, explore emerging trends, and
-                                                collaborate for the
-                                                advancement of education.</p>
+                                            <a href="nsGallery.html">
+
+                                                <p>Our M.Ed and B.Ed college organized a prestigious National Seminar.
+                                                </p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -401,15 +412,10 @@
                                     <div class="content_box event_box box_shadow1 ">
 
                                         <div class="content_desc bg-white">
-                                            <h4 class="content_title"><a href="siGallery.html">Student Internship</a>
-                                            </h4>
-                                            <ul class="list_none content_meta">
-                                                <li><i class="ti-location-pin"></i><span
-                                                        class="text_default">Trichy</span></li>
-                                            </ul>
-                                            <p>Discover the power of hands-on learning as a student intern at our
-                                                college, where you
-                                                will gain invaluable insights into the world of education.</p>
+                                            <a href="siGallery.html">
+                                                <p>Discover the power of hands-on learning as a student intern at our
+                                                    college.</p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -419,17 +425,17 @@
 
                 </div>
 
-                <div class="col-xl-6 col-md-6 h-100">
+                <div class="col-xl-6 col-md-6" id="news1">
                     <div class="content_box event_box box_shadow1 animation" data-animation="fadeInUp"
                         data-animation-delay="0.02s">
-                        <div class="content_desc bg-white" style="height: 100%;">
+                        <div class="content_desc bg-white">
                             <h4 class="content_title"><a href="yogaGallery.html">Admission 2023-2024</a></h4>
                             <ul class="list_none content_meta">
                                 <!-- <li><i class="ti-user"></i> <span class="text_default"></span></li> -->
                                 <li><i class="ti-location-pin"></i><span class="text_default">Jenneys College of
                                         Education,Trichy</span></li>
                             </ul>
-                            <p>Admissions going on for 2023-2024 </p>
+                            <p class="my-3">Admissions going on for 2023-2024.The admission process for both B.Ed. and M.Ed. are carried out as per the Government and Tamilnadu Teachers Education University norms. 75% of Admission is by single window counselling and 25% by the Management.</p>
                             <a class="btn btn-default animation rounded-0" href="application.html">Apply online</a>
                         </div>
                     </div>
@@ -679,7 +685,8 @@
                                 <!-- <li><i class="ti-user"></i> <a href="#" class="text_default">John Wood</a></li> -->
                                 <li><i class="ti-location-pin"></i><span class="text_default">Trichy</span></li>
                             </ul>
-                            <p>Our M.Ed. and B.Ed. college organized a prestigious National Seminar, providing a platform
+                            <p>Our M.Ed. and B.Ed. college organized a prestigious National Seminar, providing a
+                                platform
                                 for educators to share expertise, explore emerging trends, and collaborate for the
                                 advancement of education.</p>
                         </div>
