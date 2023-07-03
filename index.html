@@ -112,6 +112,33 @@
         p {
     text-align: justify ;
 }
+
+
+    /* CSS for desktop view */
+@media (min-width: 992px) {
+  #carousel-itemid {
+    background-image: url("assets/images/Gallery/ns1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* CSS for mobile view */
+@media (max-width: 991px) {
+  #carousel-itemid {
+    background-image: url("assets/images/Gallery/ns1m.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #adminsid
+  {
+    padding-left: 50px;
+  padding-right: 50px;
+  }
+}
+
     </style>
 </head>
 
@@ -278,31 +305,27 @@
     <section class="banner_section p-0 full_screen">
         <div id="carouselExampleControls" class="banner_content_wrap carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active background_bg overlay_bg_50"
-                    data-img-src="assets/images/Gallery/ns1.jpeg">
+                <div class="carousel-item active background_bg overlay_bg_50" id="carousel-itemid">
                     <div class="banner_slide_content">
-                        <div class="container"><!-- STRART CONTAINER -->
-                            <div class="row justify-content-center">
-                                <div class="col-lg-9 col-sm-12 text-center">
-                                    <div class="banner_content animation text_white" data-animation="fadeIn"
-                                        data-animation-delay="0.8s">
-                                        <h2 class="font-weight-bold animation text-uppercase" data-animation="zoomIn"
-                                            data-animation-delay="1s" style="white-space: nowrap;"> <span
-                                                class="text_default"></span>JENNEYS COLLEGE
-                                            OF EDUCATION</h2>
-                                        <p class="animation" style="  text-align: inherit ;" data-animation="zoomIn" data-animation-delay="1.5s">
-                                            APPROVED BY THE NCTE, BENGALURU.<br>
-                                            AFFILIATED TO TAMIL NADU TEACHERS EDUCATION UNIVERSITY, CHENNAI-600 097.<br>
-                                            ACCREDITED WITH 'B' GRADE BY NAAC.</p>
-                                        <a class="btn btn-default animation rounded-0" href="academics.html" data-animation="zoomIn"
-                                            data-animation-delay="1.8s">Our Courses</a>
-                                        <!-- <a class="btn btn-outline-white animation rounded-0" href="#" data-animation="zoomIn" data-animation-delay="1.8s">Learn More</a> -->
-                                    </div>
-                                </div>
+                      <div class="container"><!-- STRART CONTAINER -->
+                        <div class="row justify-content-center">
+                          <div class="col-lg-9 col-sm-12 text-center">
+                            <div class="banner_content animation text_white" data-animation="fadeIn" data-animation-delay="0.8s">
+                              <h2 class="font-weight-bold animation text-uppercase" data-animation="zoomIn" data-animation-delay="1s" style="white-space: nowrap;">
+                                <span class="text_default"></span>JENNEYS COLLEGE OF EDUCATION</h2>
+                              <p class="animation" style="text-align: inherit;" data-animation="zoomIn" data-animation-delay="1.5s">
+                                APPROVED BY THE NCTE, BENGALURU.<br>
+                                AFFILIATED TO TAMIL NADU TEACHERS EDUCATION UNIVERSITY, CHENNAI-600 097.<br>
+                                ACCREDITED WITH 'B' GRADE BY NAAC.</p>
+                              <a class="btn btn-default animation rounded-0" href="academics.html" data-animation="zoomIn" data-animation-delay="1.8s">Our Courses</a>
+                              <!-- <a class="btn btn-outline-white animation rounded-0" href="#" data-animation="zoomIn" data-animation-delay="1.8s">Learn More</a> -->
                             </div>
-                        </div><!-- END CONTAINER-->
+                          </div>
+                        </div>
+                      </div><!-- END CONTAINER-->
                     </div>
-                </div>
+                  </div>
+                  
                 <div class="carousel-item background_bg overlay_bg_50"
                     data-img-src="assets/images/Gallery/DSC_9263.jpeg">
                     <div class="banner_slide_content">
@@ -844,7 +867,7 @@
 
     <!-- START SECTION TEACHER -->
     <section class="bg_gray">
-        <div class="container">
+        <div class="container" id="adminsid">
             <div class="row">
                 <div class="col-12">
                     <div class="heading_s1 text-center animation" data-animation="fadeInUp"
