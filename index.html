@@ -38,7 +38,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" id="layoutstyle" href="assets/color/theme.css">
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
 
+    <script>
+        $(function () {
+            $("#header1").load("header.html");
+            $("#footer1").load("footer.html");
+        });
+    </script>
 
     <style>
         /* .banner_content h2 {
@@ -56,7 +63,7 @@
 
         .content_desc {
             position: relative;
-            padding: 15px;
+            padding: 5px;
             height: 225px;
         }
 
@@ -137,7 +144,52 @@
     padding-left: 50px;
   padding-right: 50px;
   }
+
+
+  
 }
+
+#slidermarquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color:#07294D;
+  }
+  @keyframes blink {
+  0% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+  #slidermarquee p a{
+    display: inline-block;
+    white-space: nowrap;
+    left: 100%; /* Set the initial position to the right */
+    color: #fff;
+    top: 50%; /* Set the top position to 50% */
+    transform: translateY(50%); /* Vertically center the text */
+
+  }
+
+  #topheadline
+  {
+    animation: blink 1s infinite; /* Use the blink animation with a 1-second duration and repeat infinitely */
+
+  }
+
+
+
+
+
+
+
+
 
     </style>
 </head>
@@ -155,150 +207,10 @@
 
 
     <!-- START HEADER -->
-    <header class="header_wrap bg_blue_dark light_skin">
-        <div class="top-header light_skin">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <ul class="contact_detail list_none text-center text-md-left">
-                            <li><a href="#"><i class="ti-mobile"></i>+91 63698 38741</a></li>
-                            <li><a href="#"><i class="ti-email"></i>jcetrichy@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <div
-                            class="d-flex flex-wrap align-items-center justify-content-md-end justify-content-center mt-2 mt-md-0">
-                            <ul class="list_none social_icons social_white text-center text-md-right">
-                                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-                                <li><a href="#"><i class="ion-social-youtube-outline"></i></a></li>
-                                <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-                            </ul>
-                            <ul class="list_none header_list border_list ml-1">
-                                <li><a href="academics.html" class="btn btn-default btn-sm rounded-0">Apply Now</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html">
-                    <img class="logo_light" src="assets/images/logonew.png" alt="logo" />
-                    <img class="logo_dark" src="assets/images/logonew.png" alt="logo" />
-                    <img class="logo_default" src="assets/images/logonew.png" alt="logo" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="dropdown">
-                            <a class=" nav-link active" href="index.html">Home</a>
+    
+       
+        <div id="header1"></div>
 
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="about.html" data-toggle="dropdown">About Us</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="about.html#adm">Administrators</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#vis">Vision</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#mis">Mission</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#obj">Objectives</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#app">Approvals
-                                            </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="academics.html" data-toggle="dropdown">Academics</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="academics.html#bed">Programmes</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="academics.html#lms">LMS</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="academics.html#schlor">Syllabus</a></li>
-
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="academics.html#alumni">Alumni</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="admission.html" data-toggle="dropdown">Admission</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item" href="admission.html#ap">Admission
-                                            Procedure</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="faq.html">FAQ</a></li>
-
-                                    <li><a class="dropdown-item nav-link nav_item" href="admission.html#ss">Student
-                                            Services</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="academics.html#fac">Facilities</a></li>
-
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="" data-toggle="dropdown">Faculty</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item" href="faculty.html">Teaching</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="faculty_nt.html">Non
-                                            Teaching</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="" data-toggle="dropdown">Gallery</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item" href="gallery.html">Image Gallery</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="events.html">Events</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-
-
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="contact.html">Contact
-                                Us</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-toggle nav-link nav_item" href="#">Links</a>
-                                        <div class="dropdown-menu">
-                                            <ul>
-                                                <li><a class="dropdown-item nav-link nav_item"
-                                                        href="http://ncte-india.org/ncte_new/">NCTE</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item"
-                                                        href="https://www.tnteu.ac.in/">TNTEU</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="faq.html">FAQ</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
     <!-- END HEADER -->
 
     <!-- START SECTION BANNER -->
@@ -311,14 +223,6 @@
                         <div class="row justify-content-center">
                           <div class="col-lg-9 col-sm-12 text-center">
                             <div class="banner_content animation text_white" data-animation="fadeIn" data-animation-delay="0.8s">
-                              <h2 class="font-weight-bold animation text-uppercase" data-animation="zoomIn" data-animation-delay="1s" style="white-space: nowrap;">
-                                <span class="text_default"></span>JENNEYS COLLEGE OF EDUCATION</h2>
-                              <p class="animation" style="text-align: inherit;" data-animation="zoomIn" data-animation-delay="1.5s">
-                                APPROVED BY THE NCTE, BENGALURU.<br>
-                                AFFILIATED TO TAMIL NADU TEACHERS EDUCATION UNIVERSITY, CHENNAI-600 097.<br>
-                                ACCREDITED WITH 'B' GRADE BY NAAC.</p>
-                              <a class="btn btn-default animation rounded-0" href="academics.html" data-animation="zoomIn" data-animation-delay="1.8s">Our Courses</a>
-                              <!-- <a class="btn btn-outline-white animation rounded-0" href="#" data-animation="zoomIn" data-animation-delay="1.8s">Learn More</a> -->
                             </div>
                           </div>
                         </div>
@@ -334,17 +238,7 @@
                                 <div class="col-lg-9 col-sm-12 text-center">
                                     <div class="banner_content animation text_white" data-animation="fadeIn"
                                         data-animation-delay="0.8s">
-                                        <h2 class="font-weight-bold animation text-uppercase" data-animation="zoomIn"
-                                            data-animation-delay="1s" style="white-space: nowrap;"> <span
-                                                class="text_default"></span>JENNEYS COLLEGE
-                                            OF EDUCATION</h2>
-                                        <p class="animation" style="  text-align: inherit ;" data-animation="zoomIn" data-animation-delay="1.5s">
-                                            APPROVED BY THE NCTE, BENGALURU.<br>
-                                            AFFILIATED TO TAMIL NADU TEACHERS EDUCATION UNIVERSITY, CHENNAI-600 097.<br>
-                                            ACCREDITED WITH 'B' GRADE BY NAAC.</p>
-                                                
-                                        <a class="btn btn-default animation rounded-0" href="academics.html" data-animation="zoomIn"
-                                            data-animation-delay="1.8s">Our Courses</a>
+                                      
                                         <!-- <a class="btn btn-outline-white animation rounded-0" href="#" data-animation="zoomIn" data-animation-delay="1.8s">Learn More</a> -->
                                     </div>
                                 </div>
@@ -360,17 +254,6 @@
                                 <div class="col-lg-9 col-sm-12 text-center">
                                     <div class="banner_content animation text_white" data-animation="fadeIn"
                                         data-animation-delay="0.8s">
-                                        <h2 class="font-weight-bold animation text-uppercase" data-animation="zoomIn"
-                                            data-animation-delay="1s" style="white-space: nowrap;"><span
-                                                class="text_default"> </span> JENNEYS
-                                            COLLEGE OF EDUCATION</h2>
-                                        <p class="animation" data-animation="zoomIn" data-animation-delay="1.5s">
-                                            APPROVED BY THE NCTE, BENGALURU.<br>
-                                            AFFILIATED TO TAMIL NADU TEACHERS EDUCATION UNIVERSITY, CHENNAI-600 097.<br>
-                                            ACCREDITED WITH 'B' GRADE BY NAAC</p>
-                                        <a class="btn btn-default animation rounded-0" href="academics.html" data-animation="zoomIn"
-                                            data-animation-delay="1.8s">Our Courses</a>
-                                        <!-- <a class="btn btn-outline-white animation rounded-0" href="#" data-animation="zoomIn" data-animation-delay="1.8s">Learn More</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -385,17 +268,6 @@
                             <div class="col-lg-9 col-sm-12 text-center">
                                 <div class="banner_content animation text_white" data-animation="fadeIn"
                                     data-animation-delay="0.8s">
-                                    <h2 class="font-weight-bold animation text-uppercase" data-animation="zoomIn"
-                                        data-animation-delay="1s" style="white-space: nowrap;"><span
-                                            class="text_default"> </span> JENNEYS
-                                        COLLEGE OF EDUCATION</h2>
-                                    <p class="animation" data-animation="zoomIn" data-animation-delay="1.5s">
-                                        APPROVED BY THE NCTE, BENGALURU.<br>
-                                        AFFILIATED TO TAMIL NADU TEACHERS EDUCATION UNIVERSITY, CHENNAI-600 097.<br>
-                                        ACCREDITED WITH 'B' GRADE BY NAAC</p>
-                                    <a class="btn btn-default animation rounded-0" href="academics.html" data-animation="zoomIn"
-                                        data-animation-delay="1.8s">Our Courses</a>
-                                    <!-- <a class="btn btn-outline-white animation rounded-0" href="#" data-animation="zoomIn" data-animation-delay="1.8s">Learn More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -410,17 +282,6 @@
                         <div class="col-lg-9 col-sm-12 text-center">
                             <div class="banner_content animation text_white" data-animation="fadeIn"
                                 data-animation-delay="0.8s">
-                                <h2 class="font-weight-bold animation text-uppercase" data-animation="zoomIn"
-                                    data-animation-delay="1s" style="white-space: nowrap;"><span
-                                        class="text_default"> </span> JENNEYS
-                                    COLLEGE OF EDUCATION</h2>
-                                <p class="animation" data-animation="zoomIn" data-animation-delay="1.5s">
-                                    APPROVED BY THE NCTE, BENGALURU.<br>
-                                    AFFILIATED TO TAMIL NADU TEACHERS EDUCATION UNIVERSITY, CHENNAI-600 097.<br>
-                                    ACCREDITED WITH 'B' GRADE BY NAAC</p>
-                                <a class="btn btn-default animation rounded-0" href="academics.html" data-animation="zoomIn"
-                                    data-animation-delay="1.8s">Our Courses</a>
-                                <!-- <a class="btn btn-outline-white animation rounded-0" href="#" data-animation="zoomIn" data-animation-delay="1.8s">Learn More</a> -->
                             </div>
                         </div>
                     </div>
@@ -445,6 +306,12 @@
                 </a>
             </div>
         </div>
+        <div id="slidermarquee" >
+            <marquee width="100%" direction="left" height="50px" scrollamount="5">
+                <p><a href="academics.html">Admissions Open for B.Ed & M.Ed 2023-2024  </a>
+                </p>
+            </marquee>
+        </div>
     </section>
     <!-- END SECTION BANNER -->
 
@@ -455,8 +322,8 @@
 
                 <div class="col-xl-6 col-md-6 h-100" id="news">
                     <div class="card ">
-                        <div class="card-header">
-                            <h3>News and Events</h3>
+                        <div class="card-header" style="background-color: #07294D;">
+                            <h3 style="color: white;">News and Events</h3>
                         </div>
                         <div class="card-body">
                             <marquee width="100%" direction="up" height="200px" scrollamount="2">
@@ -500,17 +367,19 @@
                 <div class="col-xl-6 col-md-6" id="news1">
                     <div class="content_box event_box box_shadow1 animation" data-animation="fadeInUp"
                         data-animation-delay="0.02s">
-                        <div class="content_desc bg-white">
-                            <h4 class="content_title"><a href="yogaGallery.html">Admission 2023-2024</a></h4>
+                        <div class="content_desc bg-white" >
+                            <div id="topheadline">
+                            <h4 class="content_title"><a href="yogaGallery.html" style="color: #07294D;">Admission 2023-2024</a></h4>
                             <ul class="list_none content_meta">
                                 <!-- <li><i class="ti-user"></i> <span class="text_default"></span></li> -->
-                                <li><i class="ti-location-pin"></i><span class="text_default">Jenneys College of
+                                <li ><i class="ti-location-pin"></i><span class="text_default"  >Jenneys College of
                                         Education,Trichy</span></li>
                             </ul>
+                        </div>
                             <p class="my-3">Admissions going on for 2023-2024.The admission process for both B.Ed. and
                                 M.Ed. are carried out as per the Government and Tamilnadu Teachers Education University
                                 norms. 75% of Admission is by single window counselling and 25% by the Management.</p>
-                            <a class="btn btn-default animation rounded-0" href="academics.html">Apply online</a>
+                            <a class="btn btn-default animation rounded-0" href="application.html">Apply online</a>
                         </div>
                     </div>
                 </div>
@@ -618,14 +487,14 @@
                                             ACCREDITED WITH 'B' GRADE BY NAAC</p>
 
                                             <p><b>Approval Number</b></p>
-                                        <p> <b>B. Ed.</b><br>
+                                        <p> <b>B.Ed.</b><br>
                                             NCTE - F.No.SRC/NCTE/APS08048/B.Ed./TN/2023/139315<br>
                             
                                             TNTEU - No.TNTEU/R/Cont.Affln./2023/793<br>
                     
                                             </p>
                     
-                                            <p> <b>B. Ed.</b><br>
+                                            <p> <b>M.Ed.</b><br>
                                                 NCTE - SRO/NCTE/SRCAPP1353/M.Ed./TN/2015-2016/63371<br>
                                                 TNTEU - No. TNTEU/R/Cont.Affln./2021/2419
                                                 
@@ -730,7 +599,7 @@
                     <div class="text-center text_white animation" data-animation="fadeInUp"
                         data-animation-delay="0.01s">
                         <div class="heading_s1 heading_light text-center">
-                            <h2>Events and News</h2>
+                            <h2>Latest Events</h2>
                         </div>
                     </div>
                 </div>
@@ -743,7 +612,6 @@
                             <a href="yogaGallery.html"><img src="assets/images/Gallery/yogaDay/y6.jpeg"
                                     alt="event_img1" /></a>
                             <div class="event_date">
-                                <h5><span>21</span>June 2023</h5>
                                 <!-- <span class="event_time bg_default">10:00 am 3:00 pm</span> -->
                             </div>
                         </div>
@@ -765,7 +633,6 @@
                             <a href="nsGallery.html"><img src="assets/images/Gallery/National Seminar/ns1.JPG"
                                     alt="event_img2" /></a>
                             <div class="event_date">
-                                <h5><span>2023</span> </h5>
                                 <!-- <span class="event_time bg_default">9:00 am 4:00 pm</span> -->
                             </div>
                         </div>
@@ -789,7 +656,6 @@
                             <a href="siGallery.html"><img style="height: 232px;"
                                     src="assets/images/Gallery/Student Internship/si1.jpeg" alt="event_img3" /></a>
                             <div class="event_date">
-                                <h5><span>2022</span></h5>
                             </div>
                         </div>
                         <div class="content_desc bg-white">
@@ -865,7 +731,7 @@
     <!-- END SECTION COUNTER -->
 
 
-    <!-- START SECTION TEACHER -->
+    <!-- START SECTION TEACHER 
     <section class="bg_gray">
         <div class="container" id="adminsid">
             <div class="row">
@@ -928,7 +794,7 @@
             </div>
         </div>
     </section>
-    <!-- END SECTION TEACHER -->
+     END SECTION TEACHER -->
 
     
 
@@ -956,7 +822,7 @@
                             </div> -->
                             <div class="testi_meta">
                                 <div class="testi_user">
-                                    <h6>Sivaraman PGT,GH</h6>
+                                    <h6>Sivaraman PGT,Government School</h6>
                                     <span class="text_default">B.Ed. 2015-2017</span>
                                 </div>
                                 <div class="testi_desc">
@@ -1160,91 +1026,13 @@
     <!-- END SECTION CLIENT LOGO -->
 
     <!-- START FOOTER -->
-    <footer class="bg_blue_dark footer_dark">
-        <div class="top_footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-8 mb-4 mb-lg-0">
-                        <div class="footer_logo">
-                            <a href="index.html"><img alt="logo" src="assets/images/logo.png"></a>
-                        </div>
-                        <p>At Jenneys we make Education as a chance to discover ones intellectual passions and
-                            curiosity, to open one’s mind to new ideas and perspectives.</p>
-                        <ul class="contact_info contact_info_light list_none">
-                            <li>
-                                <i class="fa fa-map-marker-alt "></i>
-                                <address>Manigandam Road, Ramjee Nagar, Trichy-620 009.</address>
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope"></i>
-                                <a href="mailto:jenneyseducation@yahoo.com">jenneyseducation@yahoo.com</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-mobile-alt"></i>
-                                <p>+91 63698 38741</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-sm-4 mb-4 mb-lg-0">
-                        <h6 class="widget_title">Useful Links</h6>
-                        <ul class="list_none widget_links links_style2">
-                            <li><a href="academics.html#bed">B.Ed.</a></li>
-                            <li><a href="academics.html#med">M.Ed.</a></li>
-                            <li><a href="https://www.tnteu.ac.in/">TNTEU</a></li>
-                            <li><a href="http://ncte-india.org/ncte_new/">NCTE</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                        <h6 class="widget_title">Menu Links</h6>
-                        <ul class="list_none widget_links links_style2">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="faculty.html">Faculty</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h6 class="widget_title">Follow Us</h6>
-                        <ul class="list_none social_icons social_white social_style1">
-                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-                            <li><a href="#"><i class="ion-social-youtube-outline"></i></a></li>
-                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom_footer bg_blue_dark2">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <p class="copyright m-md-0 text-center text-md-left"> Copyright © Jenneys 2023. All right
-                            reserved.Designed by
-                            <a style="color: #4df9a5;" href="https://www.asquare.tech" target="\blank"
-                                class="text_underline">ASQUARE
-                                DIGITAL SOLUTIONS.</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list_none footer_link text-center text-md-right">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <div id="footer1"></div>
+
     <!-- END FOOTER -->
 
     <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
 
     <!-- Latest jQuery -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
     <!-- jquery-ui -->
     <script src="assets/js/jquery-ui.js"></script>
     <!-- popper min js -->

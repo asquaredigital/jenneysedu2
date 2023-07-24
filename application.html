@@ -38,13 +38,36 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" id="layoutstyle" href="assets/color/theme.css">
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
 
+    <script>
+        $(function () {
+            $("#header1").load("header.html");
+            $("#footer1").load("footer.html");
+        });
+    </script>
     <style>
-        .padding_eight_all {
-            padding: 3%;
+        .team_img img {
+            height: 279px !important;
         }
-        
-        @media only screen and (max-width: 480px) {
+
+
+        @media only screen and (min-width: 575px) {
+            .radius_lbrb_10 {
+                border-radius: 0 0 10px 10px;
+                height: 160px ;
+            }
+        }
+
+        .team_box span{
+            font-size: 14px;
+        }
+        section.small_pt {
+    padding-top: 6px;
+}
+
+
+@media only screen and (max-width: 480px) {
             .navbar-brand img {
                 max-width: 250px !important;
             }
@@ -55,6 +78,13 @@
                 padding: 9px 0 !important;
             }
         }
+
+        .course_list .content_img {
+    float: left;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+}
     </style>
 </head>
 
@@ -68,149 +98,12 @@
     </div>
     <!-- END LOADER -->
 
+  
+
 
     <!-- START HEADER -->
-    <header class="header_wrap bg_blue_dark light_skin">
-        <div class="top-header light_skin">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <ul class="contact_detail list_none text-center text-md-left">
-                            <li><a href="#"><i class="ti-mobile"></i>+91 63698 38741</a></li>
-                            <li><a href="#"><i class="ti-email"></i>jcetrichy@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <div
-                            class="d-flex flex-wrap align-items-center justify-content-md-end justify-content-center mt-2 mt-md-0">
-                            <ul class="list_none social_icons social_white text-center text-md-right">
-                                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-                                <li><a href="#"><i class="ion-social-youtube-outline"></i></a></li>
-                                <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-                            </ul>
-                            <ul class="list_none header_list border_list ml-1">
-                                <li><a href="academics.html" class="btn btn-default btn-sm rounded-0">Apply Now</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.html">
-                    <img class="logo_light" src="assets/images/logonew.png" alt="logo" />
-                    <img class="logo_dark" src="assets/images/logonew.png" alt="logo" />
-                    <img class="logo_default" src="assets/images/logonew.png" alt="logo" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="dropdown">
-                            <a class=" nav-link active" href="index.html" >Home</a>
+    <div id="header1"></div>
 
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">About Us</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="about.html#adm">Administrators</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#vis">Vision</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#mis">Mission</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#obj">Objectives</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="about.html#app">Approval Number</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Academics</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="academics.html#bed">Programmes</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="academics.html#lms">LMS</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="academics.html#schlor">Syllabus</a></li>
-                               
-                                    <li><a class="dropdown-item nav-link nav_item"
-                                            href="academics.html#alumni">Alumni</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Admission</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item" href="admission.html#ap">Admission
-                                            Procedure</a></li>
-                                            <li><a class="dropdown-item nav-link nav_item" href="faq.html">FAQ</a></li>
-
-                                    <li><a class="dropdown-item nav-link nav_item" href="admission.html#ss">Student Services</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="academics.html#fac">Facilities</a></li>
-                                   
-                                </ul>
-                            </div>
-                        </li>
-                       
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Faculty</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item" href="faculty.html">Teaching</a></li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="faculty_nt.html">Non
-                                            Teaching</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Gallery</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-item nav-link nav_item" href="gallery.html">Image Gallery</a>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="events.html">Events</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                      
-
-                        <li class="dropdown">
-                            <a class="dropdown-toggle nav-link" href="contact.html" >Contact
-                                Us</a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li><a class="dropdown-toggle nav-link nav_item" href="#">Links</a>
-                                        <div class="dropdown-menu">
-                                            <ul>
-                                                <li><a class="dropdown-item nav-link nav_item"
-                                                        href="http://ncte-india.org/ncte_new/">NCTE</a></li>
-                                                <li><a class="dropdown-item nav-link nav_item"
-                                                        href="https://www.tnteu.ac.in/">TNTEU</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a class="dropdown-item nav-link nav_item" href="faq.html">FAQ</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
     <!-- END HEADER -->
 
     <!-- START SECTION BREADCRUMB -->
@@ -227,7 +120,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-sm-end">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Application</li>
+                            <li class="breadcrumb-item active" aria-current="page">Faculty</li>
                         </ol>
                     </nav>
                 </div>
@@ -236,408 +129,65 @@
     </section>
     <!-- END SECTION BANNER -->
 
-    <!-- START SECTION REGISTER -->
-    <section class=" background_bg bg_blue2 bg_fixed" data-img-src="assets/images/pattern_bg4.png">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12 col-md-12">
-                    <div class="bg-white apply_form radius_all_10 box_shadow1 padding_eight_all animation"
-                        data-animation="fadeInLeft" data-animation-delay="0.02s">
-                        <div class="heading_s1 text-center">
-                            <h3>Online Application</h3>
-                        </div>
+  
 
-                        <form id="contact-form" method="post" class="contact-form">
-                            <div class="row m-3">
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="name">Applicant Name:</label>
-                                            <input type="text" name="name" id="name" class="form-control"
-                                                placeholder="Applicant Name*" required="required" autocomplete="given-name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="dob">DOB:</label>
-                                            <input type="text" name="dob" id="dob" class="form-control"
-                                                placeholder="DD/MM/YYYY *" required="required" autocomplete="given-name"father_name>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="father_name">Father's Name:</label>
-                                            <input type="text" name="father_name" id="father_name" class="form-control"
-                                                placeholder="Father's Name*" required="required">
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="mother_name">Mother's Name:</label>
-                                            <input type="text" name="mother_name" id="mother_name" class="form-control"
-                                                placeholder="Mother's Name*" required="required">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-        
-                                        <div class="form-group">
-                                            <label for="religion">Religion *:</label>
-                                            <div class="input-group">
-                                                <select class="form-control" name="religion" id="religion"
-                                                    required="required">
-                                                    <option selected="" value="">--Select Religion--</option>
-                                                    <option value="Hindu">Hindu</option>
-                                                    <option value="Christian">Christian</option>
-                                                    <option value="Muslim">Muslim</option>
-                                                    <option value="Others">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="apl_community">Community *:</label>
-                                            <div class="input-group">
-                                                <select class="form-control" name="community" id="community"
-                                                    required="required">
-                                                    <option selected="" value="">--Select Community--</option>
-                                                    <option value="SC">SC</option>
-                                                    <option value="ST">ST</option>
-                                                    <option value="SCC">SCC</option>
-                                                    <option value="SCA">SCA</option>
-                                                    <option value="MBC">MBC</option>
-                                                    <option value="DNC">DNC</option>
-                                                    <option value="BC">BC</option>
-                                                    <option value="BC">FC</option>
-                                                    <option value="OC">OC</option>
-                                                    <option value="Others">Others</option>
-                                                </select>
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="apl_caste">Caste:</label>
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" name="caste" id="caste"
-                                                    placeholder="Caste*" required="required">
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="scourse">Select Degree*:</label>
-                                            <div class="input-group">
-                                                <select class="form-control" name="scourse" id="scourse" required="required"
-                                                    v-model="selectedCourse" @change="chooseCourse(selectedCourse)">
-                                                    <option selected="" value="">--Select Degree--</option>
-                                                    <option value="bed">B.Ed.</option>
-                                                    <option value="med">M.Ed.</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-lg-12">
-                                        <label>Educational Qualification:</label> <br>
-                                        <label>SSLC :</label>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="sslc_obtained" class="form-control" id="sslc_obtained"
-                                                        placeholder="SSLC Marks Obtained*" type="text" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="sslc_total" class="form-control" id="sslc_total"
-                                                        placeholder="SSLC Total Marks*" type="text" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="sslc_passing" class="form-control" id="sslc_passing"
-                                                        placeholder="SSLC Year of Passing*" type="text" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-        
-                                    <div class="col-lg-12">
-                                        <label>HSC :</label>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="hsc_obtained" class="form-control" id="hsc_obtained"
-                                                        placeholder="HSC Marks Obtained*" type="text" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="hsc_total" class="form-control" id="hsc_total"
-                                                        placeholder="HSC Total Marks*" type="text" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="hsc_passing" class="form-control" id="hsc_passing"
-                                                        placeholder="HSC Year of Passing*" type="text" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-        
-                                    <div class="col-lg-12">
-                                        <label>Degree :</label> <br>
-                                        <label>UG :</label>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="ug_subject" class="form-control" id="ug_subject"
-                                                        placeholder="UG Major*" type="text" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="ug_obtained" class="form-control" id="ug_obtained"
-                                                        placeholder="UG Obtained Marks*" type="text" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="ug_total" class="form-control" id="ug_total"
-                                                        placeholder="UG Total Marks*" type="text" required>
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="ug_percentage" class="form-control" id="ug_percentage"
-                                                        placeholder="UG Percentage*" type="text" required>
-                                                </div>
-                                            </div>
-                                           
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="ug_passing" class="form-control" id="ug_passing"
-                                                        placeholder="UG Year of Passing*" type="text" required>
-                                                </div>
-                                            </div>
-                                          
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-lg-12">
-                                        <label>PG :</label>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="pg_subject" class="form-control" id="pg_subject"
-                                                        placeholder="PG Major" type="text" >
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="pg_obtained" class="form-control" id="pg_obtained"
-                                                        placeholder="PG Obtained Marks" type="text" >
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="pg_total" class="form-control" id="pg_total"
-                                                        placeholder="PG Total Marks" type="text" >
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="pg_percentage" class="form-control" id="pg_percentage"
-                                                        placeholder="PG Percentage" type="text" >
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="pg_passing" class="form-control" id="pg_passing"
-                                                        placeholder="PG Year of Passing" type="text" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-lg-12">
-                                        <label>B.Ed. :</label>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="bed_subject" class="form-control" id="bed_subject"
-                                                        placeholder="B.Ed. Major" type="text" >
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="bed_obtained" class="form-control" id="bed_obtained"
-                                                        placeholder="B.Ed. Obtained Marks" type="text" >
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="bed_total" class="form-control" id="bed_total"
-                                                        placeholder="B.Ed. Total Marks" type="text" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="bed_percentage" class="form-control" id="bed_percentage"
-                                                        placeholder="B.Ed. Percentage" type="text" >
-                                                </div>
-                                            </div>
-                                           
-                                            <div class="col-lg-4">
-                                                <div class="form-group">
-                                                    <input name="bed_passing" class="form-control" id="bed_passing"
-                                                        placeholder="B.Ed. Year of Passing" type="text" >
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-        
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="mobile">Mobile No:</label>
-                                            <input type="tel" name="mobile" id="mobile" class="form-control"
-                                                placeholder="Contact Mobile Number*" required="required"
-                                                autocomplete="tel-national">
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label for="email">Email:</label>
-                                            <input type="email" name="email" id="email" class="form-control"
-                                                placeholder="Contact Mail Id*" required="required" autocomplete="email">
-                                        </div>
-        
-                                    </div>
-        
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="address">Address:</label>
-                                            <textarea name="address" id="address" class="form-control"
-                                                placeholder="Address for communication*" style="height: 115px;"
-                                                required="required" autocomplete="street-address"></textarea>
-                                        </div>
-                                    </div>
+  <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="course_list">
+                    
+                    <div class="row">
 
-                                    <div class="col-lg-9 clearfix"></div>
-                                    <div class="col-lg-3">
-                                    <button type="submit" title="Submit Your Message!" class="btn btn-default"
-                                    name="submit" value="Submit">Register Now</button>
-                                    </div>
-                                    <div style="text-align: right; color:black" id="response-message"></div>
-
+                        <div class="col-md-6">
+                            <div class="content_box box_shadow1 animation" data-animation="fadeInUp"
+                                data-animation-delay="0.02s">
+                                <div class="content_img">
+                                    <a href="bedapplication.html"><img src="assets/images/c8.jpg"
+                                            alt="course_img1" /></a>
                                 </div>
-                        </form>
-
+                                <div class="content_footer">
+                                    <div class="teacher">
+                                        <h4 class="content_title"><a href="bedapplication.html">B.Ed. Online Application - Click Here</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn btn-default animation rounded-0" href="academics.html#bed" style="background-color: #07294D;border-color: #07294D;margin-top: 10px; text-align: left;">Course Details</a>
+                            <a class="btn btn-default animation rounded-0" href="assets/doc/Application/BEd NEW Application 2023 -25 final.pdf" style="background-color: #07294D;border-color: #07294D;margin-top: 10px; text-align: left;">Offline Application</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="content_box box_shadow1 animation" data-animation="fadeInUp"
+                                data-animation-delay="0.02s">
+                                <div class="content_img">
+                                    <a href="medapplication.html"><img src="assets/images/c13.jpeg"
+                                            alt="course_img1" /></a>
+                                </div>
+                                <div class="content_footer">
+                                    <div class="teacher">
+                                        <h4 class="content_title"><a href="medapplication.html">M.Ed. Online Application - Click Here</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn btn-default animation rounded-0" href="academics.html#med" style="background-color: #07294D;border-color: #07294D;margin-top: 10px;text-align: left;">Course Details</a>
+                            <a class="btn btn-default animation rounded-0" href="assets/doc/Application/MEd NEW Application 2023-25 Final.pdf" style="background-color: #07294D;border-color: #07294D;margin-top: 10px;text-align: left;">Offline Application</a>
+                        </div>
                     </div>
+                   
+                   
                 </div>
             </div>
         </div>
-    </section>
-    <!-- END SECTION REGISTER -->
-
+    
+       </div>
+  </section>
+   
 
 
     <!-- START FOOTER -->
-    <footer class="bg_blue_dark footer_dark">
-        <div class="top_footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-8 mb-4 mb-lg-0">
-                        <div class="footer_logo">
-                            <a href="index.html"><img alt="logo" src="assets/images/logo.png"></a>
-                        </div>
-                        <p>At Jenneys we make Education as a chance to discover ones intellectual passions and
-                            curiosity, to open one’s mind to new ideas and perspectives.</p>
-                        <ul class="contact_info contact_info_light list_none">
-                            <li>
-                                <i class="fa fa-map-marker-alt "></i>
-                                <address>Manigandam Road, Ramjee Nagar, Trichy-620 009.</address>
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope"></i>
-                                <a href="mailto:jenneyseducation@yahoo.com">jenneyseducation@yahoo.com</a>
-                            </li>
-                            <li>
-                                <i class="fa fa-mobile-alt"></i>
-                                <p>+91 63698 38741</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-sm-4 mb-4 mb-lg-0">
-                        <h6 class="widget_title">Useful Links</h6>
-                        <ul class="list_none widget_links links_style2">
-                            <li><a href="academics.html#bed">B.E.d</a></li>
-                            <li><a href="academics.html#med">M.Ed.</a></li>
-                            <li><a href="https://www.tnteu.ac.in/">TNTEU</a></li>
-                            <li><a href="http://ncte-india.org/ncte_new/">NCTE</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                        <h6 class="widget_title">Menu Links</h6>
-                        <ul class="list_none widget_links links_style2">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="faculty.html">Faculty</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h6 class="widget_title">Follow Us</h6>
-                        <ul class="list_none social_icons social_white social_style1">
-                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-                            <li><a href="#"><i class="ion-social-youtube-outline"></i></a></li>
-                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom_footer bg_blue_dark2">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <p class="copyright m-md-0 text-center text-md-left"> Copyright © Jenneys 2023. All right reserved.Designed by
-                            <a style="color: #4df9a5;" href="https://www.asquare.tech" target="\blank" class="text_underline">ASQUARE
-                                        DIGITAL SOLUTIONS.</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="list_none footer_link text-center text-md-right">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer1"></div>
+
     <!-- END FOOTER -->
 
     <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
@@ -670,72 +220,7 @@
     <script src="assets/js/jquery.parallax-scroll.js"></script>
     <!-- scripts js -->
     <script src="assets/js/scripts.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#contact-form').submit(function(event) {
-                event.preventDefault(); // Prevent form submission
-        
-                // Get form data
-                var formData = {
-                   
-                    name: $('#name').val(),
-                    dob: $('#dob').val(),
-                    father_name: $('#father_name').val(),
-                    mother_name: $('#mother_name').val(),
-                    religion: $('#religion').val(),
-                    community: $('#community').val(),
-					caste: $('#caste').val(),
-					scourse: $('#scourse').val(),
-					sslc_obtained: $('#sslc_obtained').val(),
-					sslc_total: $('#sslc_total').val(),
-					sslc_passing: $('#sslc_passing').val(),
-					hsc_obtained: $('#hsc_obtained').val(),
-					hsc_total: $('#hsc_total').val(),
-					hsc_passing: $('#hsc_passing').val(),
-					ug_subject: $('#ug_subject').val(),
-                    ug_obtained: $('#ug_obtained').val(),
-					ug_total: $('#ug_total').val(),
-                    ug_percentage: $('#ug_percentage').val(),
-					ug_passing: $('#ug_passing').val(),
-					pg_total: $('#pg_total').val(),
-				    pg_subject: $('#pg_subject').val(),
-                    pg_obtained: $('#pg_obtained').val(),
-                    pg_percentage: $('#pg_percentage').val(),
-					pg_passing: $('#pg_passing').val(),
-					bed_subject: $('#bed_subject').val(),
-					bed_total: $('#bed_total').val(),
-					bed_passing: $('#bed_passing').val(),
-                    bed_obtained: $('#bed_obtained').val(),
-					bed_percentage: $('#bed_percentage').val(),
-                    mobile: $('#mobile').val(),
-                    email: $('#email').val(),
-                    address: $('#address').val(),
-                };
-        
-                // Send AJAX request
-                $.ajax({
-                    type: 'POST',
-                    url: 'apply.php',
-                    data: formData,
-                    dataType: 'json',
-                    encode: true
-                })
-                .done(function(response) {
-                    // Display response message
-                    $('#response-message').text(response.message);
-                    $("#contact-form").trigger("reset");
 
-                })
-                .fail(function(response) {
-                    // Display error message
-                    $('#response-message').text('Error occurred while processing the request.');
-                    $("#contact-form").trigger("reset");
-
-                });
-            });
-        });
-        
-            </script>
 </body>
 
 </html>
