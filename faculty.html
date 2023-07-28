@@ -47,44 +47,37 @@
         });
     </script>
     <style>
-        .team_img img {
-            height: 279px !important;
-        }
-
-
-        @media only screen and (min-width: 575px) {
-            .radius_lbrb_10 {
-                border-radius: 0 0 10px 10px;
-                height: 160px ;
-            }
-        }
-
-        .team_box span{
-            font-size: 14px;
-        }
-        section.small_pt {
-    padding-top: 6px;
-}
-
-
-@media only screen and (max-width: 480px) {
-            .navbar-brand img {
-                max-width: 250px !important;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .navbar-brand {
-                padding: 9px 0 !important;
-            }
-        }
-
-        .course_list .content_img {
-    float: left;
-    width: 100%;
-    margin-left: 0;
-    margin-top: 0;
-}
+        /* Custom CSS for the flowchart design */
+        ul.tree {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    text-align: center;
+  }
+  
+  ul.tree li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 20px; /* Adjust the space between parent and children */
+  }
+  
+  ul.tree li ul {
+    margin-top: 20px; /* Adjust the space between parent and children */
+  }
+  
+  ul.tree li a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
     </style>
 </head>
 
@@ -135,40 +128,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="course_list">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="content_box box_shadow1 animation" data-animation="fadeInUp"
-                                data-animation-delay="0.02s">
-                                <div class="content_img">
-                                    <a href="faculty_bed.html"><img src="assets/images/c8.jpg"
-                                            alt="course_img1" /></a>
-                                </div>
-                                <div class="content_footer">
-                                    <div class="teacher">
-                                        <h4 class="content_title"><a href="faculty_bed.html">B.Ed. Faculty</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="content_box box_shadow1 animation" data-animation="fadeInUp"
-                                data-animation-delay="0.02s">
-                                <div class="content_img">
-                                    <a href="faculty_med.html"><img src="assets/images/c13.jpeg"
-                                            alt="course_img1" /></a>
-                                </div>
-                                <div class="content_footer">
-                                    <div class="teacher">
-                                        <h4 class="content_title"><a href="faculty_med.html">M.Ed. Faculty</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ul class="tree">
+                    <li>
+                      <span style="color: black;font-weight: bold;font-size: 25px;">Teaching Faculty</span>
+                      <ul class="tree">
+                        <li>
+                          <a href="faculty_bed.html">B.Ed. Faculty</a>
+                        </li>
+                        <li>
+                          <a href="faculty_med.html">M.Ed. Faculty</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
             </div>
         </div>
     
