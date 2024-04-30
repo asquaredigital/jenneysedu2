@@ -31,7 +31,7 @@ $subject = 'Alumni Enquiry Form the Website';
 $message = "Name: $name\nFather Name: $f_name\nEmail: $email\nPhone Number: $mobile\nCourse: $course\nYear Passed Out: $year\nPosition: $position\nAddress: $address";
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
+//jcetrichy@gmail.com
 if (mail('jcetrichy@gmail.com', $subject, $message, $headers)) {
     // Email sent successfully
     $response = array('message' => 'Alumni Registration Successful!');

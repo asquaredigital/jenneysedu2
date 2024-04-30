@@ -1,0 +1,7 @@
+[08-Aug-2023 02:29:36 America/Boise] PHP Warning:  Undefined array key "name" in /home1/asqaured/public_html/jenneysedu/contact2.php on line 11
+[08-Aug-2023 02:29:37 America/Boise] PHP Warning:  Undefined array key "name" in /home1/asqaured/public_html/jenneysedu/contact2.php on line 11
+[02-Sep-2023 22:24:47 America/Boise] PHP Warning:  Undefined variable $u_email in /home1/asqaured/public_html/jenneysedu/medapply.php on line 47
+[27-Oct-2023 04:38:27 America/Boise] PHP Warning:  Undefined array key "name" in /home1/asqaured/public_html/jenneysedu/alumni.php on line 11
+[27-Oct-2023 04:38:27 America/Boise] PHP Warning:  Undefined variable $u_email in /home1/asqaured/public_html/jenneysedu/alumni.php on line 27
+[05-Apr-2024 03:27:31 America/Boise] PHP Warning:  Undefined variable $u_email in /home1/asqaured/public_html/jenneysedu/bedapply.php on line 43
+[26-Apr-2024 07:07:56 America/Boise] PHP Warning:  Undefined variable $u_email in /home1/asqaured/public_html/jenneysedu/medapply.php on line 47
