@@ -64,7 +64,7 @@ $headers = "From: www.jenneysedu.in" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
-$subject = 'B.Ed Application Form the Website';
+$subject = 'M.Ed Application Form the Website';
 
 // Set up email content
 $subject = 'New Application Form the Website from '.$name;
