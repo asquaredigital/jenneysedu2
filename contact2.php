@@ -68,11 +68,11 @@ try {
 ]);
 
 // Prepare JSON response
-$response = ['Email sent successfully!'];
-echo json_encode($response);
+$response = "Email sent successfully";
+echo $response;
 } catch (AwsException $e) {
 // Prepare JSON error response
-$response = ['Failed to send email.'];
-echo json_encode($response);
+$response = "Email not sent, Please contact support";
+echo $response;
 }
 ?>
