@@ -47,7 +47,7 @@ $message = "Name: $name\nFather Name: $f_name\nEmail: $u_email\nPhone Number: $m
 
 $senderEmail = 'asquaremailer@gmail.com';
 //jcetrichy@gmail.com
-$recipientEmail = 'elavarasan5193@gmail.com';
+$recipientEmail = 'jcetrichy@gmail.com';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

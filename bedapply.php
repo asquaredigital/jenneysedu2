@@ -60,7 +60,8 @@ $headers = "From: www.jenneysedu.in" . "\r\n" .
            "Reply-To: $u_email" . "\r\n" ;
 
 // Set up email content
-$subject = 'B.Ed Application Form the Website';
+$subject = 'B.Ed Application Form the Website from '.$name;
+
 $message = 
 "Name: $name\n
 DOB: $dob\n
@@ -88,12 +89,12 @@ PG Percentage: $pg_percentage\n
 PG Passing Year: $pg_passing\n
 
 Mobile: $mobile\n
-Email: $email\n
+Email: $u_email\n
 Address: $address\n
 ";
 $senderEmail = 'asquaremailer@gmail.com';
 //jcetrichy@gmail.com
-$recipientEmail = 'elavarasan5193@gmail.com';
+$recipientEmail = 'jcetrichy@gmail.com';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
