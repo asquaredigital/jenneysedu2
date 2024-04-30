@@ -414,7 +414,7 @@
                                     <button type="submit" title="Submit Your Message!" class="btn btn-default"
                                     name="submit" value="Submit">Register Now</button>
                                     </div>
-                                    <div style="text-align: right; color:black" id="response-message"></div>
+                                    <div style="text-align: right; color:black" id="responseMessage"></div>
 
                                 </div>
                         </form>
@@ -463,71 +463,23 @@
     <script src="assets/js/jquery.parallax-scroll.js"></script>
     <!-- scripts js -->
     <script src="assets/js/scripts.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#contact-form').submit(function(event) {
-                event.preventDefault(); // Prevent form submission
-        
-                // Get form data
-                var formData = {
-                   
-                    name: $('#name').val(),
-                    dob: $('#dob').val(),
-                    father_name: $('#father_name').val(),
-                    mother_name: $('#mother_name').val(),
-                    religion: $('#religion').val(),
-                    community: $('#community').val(),
-					caste: $('#caste').val(),
-					scourse: $('#scourse').val(),
-					sslc_obtained: $('#sslc_obtained').val(),
-					sslc_total: $('#sslc_total').val(),
-					sslc_passing: $('#sslc_passing').val(),
-					hsc_obtained: $('#hsc_obtained').val(),
-					hsc_total: $('#hsc_total').val(),
-					hsc_passing: $('#hsc_passing').val(),
-					ug_subject: $('#ug_subject').val(),
-                    ug_obtained: $('#ug_obtained').val(),
-					ug_total: $('#ug_total').val(),
-                    ug_percentage: $('#ug_percentage').val(),
-					ug_passing: $('#ug_passing').val(),
-					pg_total: $('#pg_total').val(),
-				    pg_subject: $('#pg_subject').val(),
-                    pg_obtained: $('#pg_obtained').val(),
-                    pg_percentage: $('#pg_percentage').val(),
-					pg_passing: $('#pg_passing').val(),
-					bed_subject: $('#bed_subject').val(),
-					bed_total: $('#bed_total').val(),
-					bed_passing: $('#bed_passing').val(),
-                    bed_obtained: $('#bed_obtained').val(),
-					bed_percentage: $('#bed_percentage').val(),
-                    mobile: $('#mobile').val(),
-                    email: $('#email').val(),
-                    address: $('#address').val(),
-                };
-        
-                // Send AJAX request
-                $.ajax({
-                    type: 'POST',
-                    url: 'medapply.php',
-                    data: formData,
-                    dataType: 'json',
-                    encode: true
-                })
-                .done(function(response) {
-                    // Display response message
-                    $('#response-message').text(response.message);
-                    $("#contact-form").trigger("reset");
-
-                })
-                .fail(function(response) {
-                    // Display error message
-                    $('#response-message').text('Error occurred while processing the request.');
-                    $("#contact-form").trigger("reset");
-
+    
+             <script>
+                $(document).ready(function(){
+                    $('#contact-form').submit(function(e){
+                        e.preventDefault();
+                        var formData = $(this).serialize();
+                        $.ajax({
+                            type: 'POST',
+                            url: 'medapply.php',
+                            data: formData,
+                            success: function(response){
+                                $('#responseMessage').text(response);
+                                $('#contact-form')[0].reset();
+                            }
+                        });
+                    });
                 });
-            });
-        });
-        
             </script>
 </body>
 
